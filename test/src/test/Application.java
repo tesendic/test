@@ -113,6 +113,27 @@ public class Application {
 		gbc_btnLogin.gridy = 2;
 		panel.add(btnLogin, gbc_btnLogin);
 		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+		frame.getContentPane().add(menuBar, BorderLayout.NORTH);
+		
+		JLabel lblMyApplicaton = new JLabel("My applicaton");
+		menuBar.add(lblMyApplicaton);
+		
+		menuBar.add(Box.createHorizontalGlue());
+		
+		JMenu mnMenu = new JMenu("Menu");
+		menuBar.add(mnMenu);
+		
+		JMenuItem mntmLogin = new JMenuItem("Login");
+		mnMenu.add(mntmLogin);
+		mntmLogin.setSelected(true);
+		
+		JMenuItem mntmRegister = new JMenuItem("Register");
+		mnMenu.add(mntmRegister);
+		
+		JMenuItem mntmSettings = new JMenuItem("Settings");
+		mnMenu.add(mntmSettings);
 		
 	}
 }
