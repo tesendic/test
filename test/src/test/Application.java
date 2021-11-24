@@ -29,7 +29,7 @@ import javax.swing.JMenu;
 public class Application {
 
 	private JFrame frame;
-	private JTextField textTextfieldUsername;
+	private JTextField textfieldUsername;
 	private JTextField textFieldPassword;
 
 	/**
@@ -81,14 +81,14 @@ public class Application {
 		gbc_lblUsername.gridy = 0;
 		panel.add(lblUsername, gbc_lblUsername);
 		
-		textTextfieldUsername = new JTextField();
+		textfieldUsername = new JTextField();
 		GridBagConstraints gbc_txtTextfieldUsername = new GridBagConstraints();
 		gbc_txtTextfieldUsername.insets = new Insets(5, 0, 5, 0);
 		gbc_txtTextfieldUsername.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtTextfieldUsername.gridx = 1;
 		gbc_txtTextfieldUsername.gridy = 0;
-		panel.add(textTextfieldUsername, gbc_txtTextfieldUsername);
-		textTextfieldUsername.setColumns(10);
+		panel.add(textfieldUsername, gbc_txtTextfieldUsername);
+		textfieldUsername.setColumns(10);
 		
 		JLabel lblPassword = new JLabel("Password");
 		GridBagConstraints gbc_lblPassword = new GridBagConstraints();
