@@ -28,7 +28,7 @@ import javax.swing.JMenu;
 
 public class Application {
 
-	private JFrame frame;
+	private JFrame jFrame;
 	private JTextField textfieldUsername;
 	private JTextField textFieldPassword;
 
@@ -40,7 +40,7 @@ public class Application {
 			public void run() {
 				try {
 					Application window = new Application();
-					window.frame.setVisible(true);
+					window.jFrame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -59,13 +59,13 @@ public class Application {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jFrame = new JFrame();
+		jFrame.setBounds(100, 100, 450, 300);
+		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "Login screen", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		frame.getContentPane().add(panel, BorderLayout.CENTER);
+		jFrame.getContentPane().add(panel, BorderLayout.CENTER);
 		GridBagLayout gbl_panel = new GridBagLayout();
 		gbl_panel.columnWidths = new int[] {0, 0, 3};
 		gbl_panel.rowHeights = new int[] {0, 0, 0, 5};
@@ -115,7 +115,7 @@ public class Application {
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-		frame.getContentPane().add(menuBar, BorderLayout.NORTH);
+		jFrame.getContentPane().add(menuBar, BorderLayout.NORTH);
 		
 		JLabel lblMyApplicaton = new JLabel("My applicaton");
 		menuBar.add(lblMyApplicaton);
